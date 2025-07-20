@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Two-Column Layout</title>
+    <style>
+        .container{
+            display: flex;
+            max-width: 600px;
+            margin: 20px auto;
+            justify-content: center;
+            border: 1px solid;
+            border-radius: 10px;
+            box-shadow: 0 0 10px;
+            padding: 20px;
+            color: rgb(114, 9, 76);
+            
+            
+            
+        }
+        .left, .right{
+            flex: 1;
+            padding: 20px;
+            box-sizing:border-box;
+        }
+        .left{
+            border-right: 1px solid #add;
+            background-color: beige;
+        }
+        .right{
+            width: 100%;
+            max-width: 200px;
+            border-radius: 10px;
+            background-color: blanchedalmond;
+        }
+    </style>
+</head>
+    <body>
+    <div class="container">
+        <div class="left">
+            <h2>My Hobbies</h2>
+            <ul>
+                <li>Coding</li>
+                <li>Baking</li>
+                <li>Travelling</li>
+                <li>Photography</li>
+            </ul>
+    </div>
+    <div class="right">
+        <h2>About Me</h2>
+        <p>Hello! I'm Safreen. I enjoy creating web designs and exploring new places in my free time.</p>
+     <img src="Unknown.jpeg"alt="My Image"height="200px" width="180px">
+    </div>
+    </body>
+</html>

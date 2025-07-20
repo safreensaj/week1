@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        .grid-container{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 20px;
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .card {
+            position: relative;
+            border: 1px solid #6e4242;
+            border-radius: 10px;
+            padding: 15px;
+            background-color: #e1c7c7;
+            box-shadow: 0 0 8px midnightblue;
+            text-align: center;
+
+        }
+        .card image{
+            width: 100%;
+            border-radius: 8px;
+        }
+        .card h3{
+            margin: 10px 0 5px;
+            color: midnightblue;
+        }
+        .card p{
+            font-size: 14px;
+            color:midnightblue;
+        }
+        .badge{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color:red;
+            color: white;
+            padding: 5px 8px;
+            font-size:12px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="card">
+            <span class="badge">New</span>
+            <img src="ship.jpeg"alt="sample">
+            <h3>A Boat ride</h3>
+            <p>Enjoy this breathtaking boat ride with your family for just Rs.3000/-. One of those journeys you will never forget. Location:Alappuzha.
+            </p>
+        </div>
+         <div class="card">
+            <img src="scenary1.jpeg"alt="sample">
+            <h3>A Scenic Beauty</h3>
+            <p>Scenaries are something we don't want to miss. The hills,skies,sun and the sea everything is soo peaceful to watch. One is able to refresh their mind no matter what.</p>
+         </div>
+          <div class="card">
+            <img src="scenary.jpeg"alt="sample">
+            <h3>A Peaceful Valley</h3>
+            <p>A calm, crystal-clear lake reflects the surrounding trees and mountains. The sun rises from behind the forest. This tranquil scene feels like a perfect escape into nature's untouched beauty.</p>
+            </div>
+             <div class="card">
+            <img src="butterfly.jpeg"alt="sample">
+            <h3>Butterflies amidst the dark</h3>
+            <p>The forest is dark and quiet. Blue butterflies are flying around. The light makes the place look magical. It feels like a calm and beautiful night.</p>
+            </div>
+             <div class="card">
+            <img src="grapes.jpeg"alt="sample">
+            <h3>Bunch of grapes</h3>
+            <p>Purple grapes are hanging from a grapevine. The grapes look fresh and juicy. Green leaves surround the fruit. A beautiful scene from a vineyard.</p>
+            </div>
+             <div class="card">
+            <img src="bird.jpeg"alt="sample">
+            <h3>An observing bird </h3>
+            <p>The bird looks calm and still. It gazes into the sky, as if lost in a world of serene thoughts and silent wonders.</p>
+            </div>
+         </div>
+</body>
+</html>
