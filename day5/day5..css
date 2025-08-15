@@ -290,13 +290,6 @@
   flex-direction: column;
   justify-content: center;
 }
-.main-title {
-  font-size: 24px;
-  font-weight: bold;
-  text-align: left;
-  margin-bottom: 20px;
-  margin-right: auto;
-}
 .tagline {
   text-align: left;
   font-size: italic;
