@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        font-family: Arial, sans-serif;
+        color: var(--text-color);
+        background-color: var(--bg-color);
+        line-height: 1.6;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        background-color: var(--primary-color);
+        position: sticky;
+        top: 0;
+    }
+    header .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    header nav ul {
+        display: flex;
+        list-style: none;
+    }
+    header nav ul li {
+        margin-left: 1rem;
+    }
+    header nav ul li a {
+        color: #222;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+    header nav ul li a:hover {
+        text-decoration: underline;
+    }
+    .about {
+        display: grid;
+        grid-template-columns: 1fr ;
+        gap: 2rem;
+        padding: 2rem 10rem;
+    }
+    .about img {
+        width: 200px;
+        border-radius: 10px;
+        padding: 0 5px;
+    }
+    .projects {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        padding: 2rem;
+    }
+    .project-card {
+        background: #f9f9f9;
+        padding: 2rem 5rem;
+        border-radius: 10px;
+        text-align: center;
+        transition: transform 0.3s ease;
+    }
+    .project-card:hover {
+        transform: translateY(-5px);
+    }
+    .project-card img {
+        width: 200px;
+        border-radius: 10px;
+        height: 200px;
+    }
+    .btn {
+        display: inline-block;
+        padding: 0.3rem 1rem;
+        background: var(--primary-color);
+        color: black;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background 0.3s ease;
+        border-color: cadetblue;
+        
+    }
+    .btn :hover {
+        background: #388e3c;
+    }
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 1rem;
+        background: #222;
+        color: #fff;
+    }
+    footer .socials a {
+        color: #fff;
+        margin: 0.0.5rem;
+        text-decoration: none;
+    }
+    @media(max-width:768px){
+        .about {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+        .projects {
+            grid-template-columns: 1fr;
+        }
+        header nav ul {
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            right: 0;
+            background: var(--primary-color);
+            display: none;
+            padding: 1rem;
+        }
+        header nav ul li {
+            margin: 0.5rem 0;
+        }
+    }
+
+</style>
+<body>
+    <header>
+        <div class="logo">My Portfolio</div>
+        <nav>
+            <ul>
+                <li><a href="#about"><i class="fa-solid fa-circle-exclamation"></i></a></li>
+                <li><a href="#projects"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li><a href="contact"><i class="fa-solid fa-phone"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="about" class="about">
+            <img src="/task3/logo.jpeg" alt="profile-image">
+            <div>
+                <h1>Safreen Sajid</h1>
+                <p>A passionate cake artist transforming delicious cakes into edible art</p>
+            </div>
+        </section>
+        <section id="projects" class="projects">
+            <div class="project-card">
+                <img src="/task3/assets/brownie.jpeg" alt="project1">
+                <h3>Nutella Brownie</h3>
+                <p>"Our best selling Nutella brownie-rich,fudgy,and loaded with creamyNutella in every bite"</p>
+                <button class="btn">View item</button>
+            </div>
+            <div class="project-card">
+                <img src="/task3/assets/cakes.jpeg" alt="project2">
+                <h3>Theme Cakes</h3>
+                <p>A cake designed to match your theme,with beautiful decorations and delicious flavours to make your celebration special</p>
+                <button class="btn">View item</button>
+            </div>
+            <div class="project-card">
+                <img src="/task3/assets/puddings.jpeg" alt="project3">
+                <h3>Puddings</h3>
+                <p>"Smooth, creamy puddings made with rich flavours for a sweet and comforting treat.."</p>
+                <button class="btn">View item</button>
+            </div>
+             <div class="project-card">
+                <img src="/task3/WhatsApp Image 2025-08-15 at 20.12.33.jpeg" alt="project3">
+                <h3>Newyork Style Cookies</h3>
+                <p>"Soft and chewy New-York Stylecookies with a rich, gooey centre i every bite."</p>
+                <button class="btn">View item</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 CreamDewz</p>
+        <div class="socials">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
