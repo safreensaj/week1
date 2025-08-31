@@ -1,0 +1,241 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+header {
+    padding: 0;
+    position: sticky;
+    top: 0;
+}
+.left-header {
+    display: flex;
+    align-items: center;
+}
+.left-header img {
+    width: 100px;
+    height: auto;
+    margin-left: 15px;
+}
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding:0 20px;
+    background: white;
+    border-bottom: 1px solid#e5e5e5;
+    position: sticky;
+    top: 0;
+}
+.left-header .fas {
+    font-size: 20px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+header i {
+    padding: 0px 7px;
+    cursor: pointer;
+}
+.searchbar {
+    display: flex;
+    align-items: center;
+}
+.searchbar input {
+    width: 500px;
+    max-width: 100%;
+    border: 1px solid #d4d4d4;
+    border-radius: 20px 0 0 20px;
+    height: 35px;
+    outline: none;
+    font-size: 16px;
+    padding: 0 15px;
+    text-transform: capitalize;
+}
+.searchbar button {
+    background: #f0f0f0;
+    padding: 0 15px;
+    margin: 0;
+    height: 35px;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+}
+ .searchbar button i {
+    font-size: 16px;
+    color: #333;
+}
+.searchbar .fa-microphone {
+    margin-right: 100px;
+    font-size: 18px;
+    border-radius: 50%;
+}
+.right-header i {
+    font-size: 20px;
+    color: rgb(96, 96, 96);
+    margin: 0 10px;
+}
+.side-bar {
+    height: 100vh;
+    width: 15%;
+    background: #fff;
+    position: fixed;
+    left: 0;
+    top: 80px;
+    padding-top: 0;
+    white-space: nowrap;
+    overflow-y: scroll;
+}
+.menu-item {
+    padding: 8px;
+    margin: 1%;
+    list-style: none;
+    color: rgb(96, 96, 96);
+}
+.menu-item i {
+    font-size: 22px;
+    width: 40px;
+    padding: 10px;
+}
+.menu-item:hover {
+    background-color: #d4d4d4;
+    cursor: pointer;
+}
+hr {
+    height: 1px;
+    border: none; 
+    background-color: #e5e5e5;
+}
+::-webkit-scrollbar {
+    width: 6px;
+    display: none;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: #bbbbbb;
+    border-radius: 10px;
+}
+.content {
+    flex:1;
+    margin-left: 240px;
+    padding: 24px;
+}
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    gap: 16px;
+}
+.video-grid iframe {
+    width: 100%;
+    height: 100%;
+}
+.video-card {
+    cursor: pointer;
+} 
+.video iframe {
+    aspect-ratio: 16/9;
+    width: 100%;
+    border: none; 
+} 
+.thumbnail {
+    position: relative;
+    height: 0;
+    padding-top: 56.25%;
+    background-color: #eee;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.thumbnail img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.video-duration {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+    padding: 2px 4px;
+    border-radius: 2px;
+    font-size: 12px;
+}
+.video-info {
+    display: flex;
+    margin-top: 12px;
+}
+.channel-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #999;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+.channel-icon img {
+    width: 36px;
+    height: 36px;
+    border-radius:50% ;
+}
+.video-details h3 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom:4px;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.video-details p {
+    font-size: 14px;
+    color: #606060;
+    margin-bottom: 2px;
+}
+@media (max-width:1200px){
+    .video-grid {
+        grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    }
+}
+@media (max-width:960px){
+    .side-bar {
+        width:72px;
+        display: none;
+    }
+    .side-bar i {
+        margin-right: 0;
+    }
+    .content {
+        margin-left: 72px;
+    }
+}
+@media(max-width:760px){
+    .side-bar {
+        display: none;
+    }
+    .searchbar {
+        display: none;
+    }
+    .video-grid {
+        grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
+    }
+    .video iframe {
+       aspect-ratio: 16/9;
+       width: 100%;
+       border: none; 
+    }
+    .video-grid iframe {
+       width: 100%;
+       height: 100%;
+       border: 0;
+}
+}
+
+
