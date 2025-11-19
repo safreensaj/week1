@@ -1,64 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple form and Table</title>
+    <title>Simple Form and Table</title>
 </head>
+
 <body>
-    <h2>Registration form</h2>
-    <form action="#"method="post">
-        Name:<input type="text"
-        name="name"><br><br>
-        Email:<input type="email"
-        name=""email><br><br>
-        Password:<input type="password"
-        name="password"><br><br>
-        Gender:
-        <input type="radio"name="gender"
-        value="male">Male
-        <input type="radio"name="gender"
-        value="female">Femail<br><br>
-        Hobbies:<input type="checkbox"name="hobby1"
-        value="reading">Reading
-        <input type="checkbox"name="hobby2"
-        value="travel">Travel<br><br>
-        Profile Picture:
-        <input type="file"
-        name="Profile"><br><br>
-        Country:
-        <select name="country">
-            <option value="india">India</option>
-            <option value="usa">USA</option>
-         </select><br><br>
-         Message:<br>
-         <textarea name="message"rows="4"cols="30"></textarea><br><br>
-         <input type="submit"value="Submit">
-        </form>
-        <hr>
-        <h2>Student Table</h2>
-        <table border="1">
-            <tr>
-                <th>Name</th>
-                <th>Age</th>
-                <th>Email</th>
-            </tr>
-            <tr>
-                <td>Alice</td>
-                <td>20</td>
-                <td>alice@gmail.com</td>
-            </tr>
-            <tr>
-                <td>Sam</td>
-                <td>21</td>
-                <td>sam@gmail.com</td>
-            </tr>
-            <tr>
-                <td>Bob</td>
-                <td>18</td>
-                <td>bob@gmail.com</td>
-            </tr>
-        </table>
-    
+
+    <h2>Registration Form</h2>
+    <form action="#" method="post" target="_blank">
+
+        <!-- Personal Details -->
+        <fieldset>
+            <legend>Personal Details</legend>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required maxlength="30">
+            <br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter email" required>
+            <br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter password" required maxlength="12">
+            <br><br>
+
+            <label>Gender:</label>
+            <input type="radio" name="gender" value="male" required> Male
+            <input type="radio" name="gender" value="female" required> Female
+            <br><br>
+
+        </fieldset>
+        <br>
+
+        <!-- Hobbies Section -->
+        <fieldset>
+            <legend>Your Interests</legend>
+
+            <label>Hobbies:</label> <br>
+            <input type="checkbox" name="hobby" value="reading"> Reading
+            <input type="checkbox" name="hobby" value="travel"> Travel
+            <input type="checkbox" name="hobby" value="music"> Music
+            <br><br>
+
+            <label for="profile">Profile Picture:</label>
+            <input type="file" id="profile" name="profile">
+            <br><br>
+
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Additional Information</legend>
+
+            <label for="country">Country:</label>
+            <select name="country" id="country">
+                <option value="india">India</option>
+                <option value="usa">USA</option>
+            </select>
+            <br><br>
+
+            <label for="message">Message:</label> <br>
+            <textarea name="message" id="message" rows="4" cols="30"
+                placeholder="Write your message here..."></textarea>
+            <br><br>
+
+        </fieldset>
+        <br>
+
+        <!-- Submit -->
+        <input type="submit" value="Submit">
+
+    </form>
+
+    <hr>
+
+    <h2>Student Table</h2>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Email</th>
+        </tr>
+        <tr>
+            <td>Alice</td>
+            <td>20</td>
+            <td>alice@gmail.com</td>
+        </tr>
+        <tr>
+            <td>Sam</td>
+            <td>21</td>
+            <td>sam@gmail.com</td>
+        </tr>
+        <tr>
+            <td>Bob</td>
+            <td>18</td>
+            <td>bob@gmail.com</td>
+        </tr>
+    </table>
+
 </body>
+
 </html>
