@@ -252,6 +252,8 @@ button {
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s;
+  display: flex;
+  justify-content: center;
 }
 .add-to-cart:hover {
   background-color: #0973b0;
